@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductsController!{% endblock %}
+
+{% block body %}
+    <div class="product">
+        <div class="productCard">
+            <h2>{{produits.nom}}</h2>``
+                <p>stock restant {{produits.stock}}</p>
+                <img src={{produits.image}} alt="">
+                <p>{{produits.description}}</p>
+        </div>
+        <div class="commentaire">
+            {% for comment in commentaires %}
+                <div class="card">
+                    <h3>{{comment.titre}}</h3>
+                    <p>{{comment.contenu}}</p>
+                </div>
+            {% endfor %}
+           
+        </div>
+         {{form(form)}}
+    </div>
+{% endblock %}
