@@ -5,14 +5,24 @@
     flex-wrap: wrap;
 
     .card{
-        width: 40%;
+        width: 30%;
         margin: 2%;
         background-color: $cardBackground;
         padding: 2%;
         border-radius: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
         
+        img{
+            height: 400px;
+            width: 400px;
+            -o-object-fit: contain;
+        }
+
         h3, p{
             text-decoration: none;
+            font-size: 1vw;
         }
     }
 }

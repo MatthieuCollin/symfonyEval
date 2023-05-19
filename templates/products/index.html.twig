@@ -8,7 +8,7 @@
             <a href={{path('app_product', { 'id': product.id }) }} class="card">
                 <h3>{{product.nom}}</h3>
                 <p>stock restant {{product.stock}}</p>
-                <img src={{product.image}} alt="">
+                <img src={{asset(product.image)}} alt={{product.nom}}>
                 <p>{{product.description}}</p>
             </a>
         {% endfor %}

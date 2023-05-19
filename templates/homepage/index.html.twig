@@ -4,10 +4,19 @@
 
 {% block body %}
     <div class="homepage">
-        <div>
+        <div class='acceuil'>
             <h2>Bienvenu sur notre site Évaluation !</h2>
-            <img src="" alt="">
+            <img src="{{asset('build/img/285-401-max.png')}}" alt="">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem molestias dolor vel cupiditate, magni voluptatibus eveniet quia suscipit quis porro inventore ea quam voluptatum placeat repellat, incidunt deserunt, sequi voluptates.</p>
+        </div>
+        <div class="products">
+        
+            {% for produit in data %}
+                <a href={{path('app_product', { 'id': produit.id }) }} class="card">
+                    <h3>{{produit.nom}}</h3>
+                    <img src={{asset(produit.img)}} alt={{produit.nom}}>
+                </a>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

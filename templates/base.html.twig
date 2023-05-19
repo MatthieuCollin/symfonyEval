@@ -16,12 +16,14 @@
     <body>
     <header>
         <div class="content">
-            <img src="{{asset('img/285-401-max.png')}}" alt="logo">
+            <img src="{{asset('build/img/285-401-max.png')}}" alt="logo">
             <h1>Éval symfony</h1>
         </div>
         <nav>
             <a href={{path('app_homepage')}}>acceuil</a>
             <a href={{path('app_products')}}>Produits</a>
+            <a href={{path('app_post_produit_index')}}>Ajouter produit</a>
+            <a href={{path('app_commentaire_index')}}>Gérer commentaire</a>
         </nav>
     </header>
         {% block body %}

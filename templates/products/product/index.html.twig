@@ -5,9 +5,9 @@
 {% block body %}
     <div class="product">
         <div class="productCard">
-            <h2>{{produits.nom}}</h2>``
+            <h2>{{produits.nom}}</h2>
                 <p>stock restant {{produits.stock}}</p>
-                <img src={{produits.image}} alt="">
+                <img src={{asset(produits.image)}} alt={{produits.nom}}>
                 <p>{{produits.description}}</p>
         </div>
         <div class="commentaire">
@@ -17,8 +17,7 @@
                     <p>{{comment.contenu}}</p>
                 </div>
             {% endfor %}
-           
         </div>
-         {{form(form)}}
+        {{form(form)}}
     </div>
 {% endblock %}
